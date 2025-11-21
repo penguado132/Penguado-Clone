@@ -206,6 +206,15 @@
       font-size: 14px;
       color: #007f7f;
     }
+
+    .button-row {
+  display: flex;          /* aligns buttons in a row */
+  justify-content: center; /* centers the row horizontally */
+  align-items: center;    /* vertically aligns buttons if they have different heights */
+  gap: 1em;               /* space between buttons */
+  flex-wrap: wrap;        /* allows wrapping on smaller screens */
+  margin: 20px 0;         /* optional spacing above and below row */
+}
   </style>
 </head>
 <body>
@@ -215,8 +224,9 @@
     <div class="search-container">
       <h2>Penguado YouTube</h2>
       <input type="text" id="searchBar" placeholder="Search for a video" />
-      <div>
+      <div class="button-row">
         <button onclick="searchVideos()">Search</button>
+        <button onclick="href='./video-player.html'">Use a Direct Link</button>
       </div>
       <div class="results-container" id="results"></div>
     </div>
